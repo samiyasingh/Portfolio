@@ -1,0 +1,560 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: #d2e1b6;
+    
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 80px; /* keeps headings visible after scroll */
+}
+
+section {
+  min-height: 100vh;  /* fills full screen */
+  padding: 30px;
+  margin-bottom: 40px; /* spacing between sections */
+}
+
+.resume-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: auto auto;
+  gap: 15px;
+  padding: 20px;
+}
+
+
+.intro-card {
+  grid-column: span 3;
+  background: #313715;
+  color: #BBCE8A;
+  border-radius: 15px;
+  padding: 30px;   /* smaller top-bottom padding */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row;  
+  flex: 1;
+  min-height: 180px;   /* ✅ control height */
+  max-height: 220px;   /* optional: don’t let it grow too tall */
+  overflow: hidden;    /* trim if text grows */
+  flex-direction: column;
+  
+}
+
+
+
+/* src/index.css */
+@font-face {
+  font-family: 'Pionel'; /* The name you will use in your CSS */
+  src: url('./assets/fonts/pionel.otf') format('opentype');
+  font-weight: 100; /* Define the font's weight */
+  font-style: normal;
+}
+
+
+
+
+
+.name {
+  font-family: 'Pionel';
+  font-size: 5rem;
+  font-weight: lighter;
+  margin-bottom: 7rem;
+  padding-left: 15px;
+  margin: 0;
+}
+
+.bio {
+  max-width: 70%;
+  line-height: 1.5;
+  
+  padding-left: 15px;
+  margin-bottom: 3rem;
+}
+
+.sam {
+  width: 350px;
+  height: auto;
+  margin-left: 70rem; /* space between text and photo */
+  border-radius: 10px; /* optional: soften corners */
+  align-self: flex-start;  /* ✅ stick image to top */
+  margin-top: -440px; 
+
+}
+
+
+/* Cards */
+.resume-card,
+.uiux-card,
+.development-card,
+.skills-card,
+.contact-card {
+  border-radius: 15px;
+  padding: 5px;
+  color: #2f2f2f;
+  font-size: 1.2rem;
+  font-weight: lighter;
+  /* border: transparent; */
+  width: 100%;
+  
+}
+
+/* Individual Colors */
+.resume-card {
+  background: #939F5C;
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  justify-content: center;  /* center vertically */
+  font-family: 'pionel';
+  height: 260px;            /* fixed height */
+  width: 450px;             /* optional: fix width if needed */
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* Or absolute, depending on layout */
+  top: 0; /* Or bottom, left, right */
+  transition: top 0.3s ease-out;
+}
+
+.resume-img {
+  max-width: 100%;           /* image resizes inside card */
+  max-height: 250px;        /* keeps image from making box bigger */
+  object-fit: contain;      /* keeps proportions */
+  margin-bottom: -1.5rem;
+}
+
+.resume {
+  font-weight: bold;
+  font-family: 'pionel';
+  font-size: 5rem;
+  color: #BBCE8A;
+  margin-bottom: -10rem;
+}
+
+.resume-card:hover {
+  top: -10px; /* or any color you like */
+}
+
+.uiux-card {
+  background: #666666be ;
+  color: #616161;
+  text-align: center;
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  justify-content: center;  /* center vertically */
+  font-family: 'pionel';
+  height: 260px;            /* fixed height */
+  width: 450px;            /* optional: fix width if needed */
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* Or absolute, depending on layout */
+  top: 0; /* Or bottom, left, right */
+  transition: top 0.3s ease-out;
+}
+.uiux{
+  font-weight: bold;
+  font-family: 'pionel';
+  font-size: 4.1rem;
+  color: #616161;
+  margin-bottom: -11rem;
+}
+.ui{
+  max-width: 100%;           /* image resizes inside card */
+  max-height: 400px;        /* keeps image from making box bigger */
+  object-fit: contain;      /* keeps proportions */
+  margin-bottom: -1.5rem;
+  
+}
+
+.uiux-card:hover {
+  top: -10px; /* or any color you like */
+}
+
+.development-card {
+  background: #D16014;
+  color: #fff;
+  grid-row: span 2;
+  cursor: pointer;
+  position: relative; /* Or absolute, depending on layout */
+  top: 0; /* Or bottom, left, right */
+  transition: top 0.3s ease-out;
+  height: 565px;
+  width: 460px;
+  text-align: center;
+}
+
+.develop{
+  font-weight: lighter;
+  font-family: 'pionel';
+  font-size: 4.1rem;
+  color: #FF8839;
+  margin-bottom: -2rem;
+}
+.dev{
+  max-width: 100%;           /* image resizes inside card */
+  max-height: 500px;
+  object-fit: contain; 
+  margin-bottom: 1rem;
+}
+
+.development-card:hover {
+  top: -10px; /* or any color you like */
+}
+
+.link{
+  font-size: xx-large;
+  font-family: 'Times New Roman', Times, serif;
+  font-weight: 900;
+  color: black;
+}
+
+.skills-card {
+  background: #E2F9B8;
+  font-family: 'pionel';
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  justify-content: center;  /* center vertically */
+  font-family: 'pionel';
+  height: 280px;
+  width: 450px;           /* optional: fix width if needed */
+  font-size: 2.5rem;
+  text-align: center;
+  cursor: pointer;
+  position: relative; /* Or absolute, depending on layout */
+  top: 0; /* Or bottom, left, right */
+  transition: top 0.3s ease-out;
+}
+
+.skills{
+  font-weight: lighter;
+  font-family: 'pionel';
+  font-size: 4.1rem;
+  color: #939F5C;
+  margin-bottom: -4rem;
+}
+.skill{
+  max-width: 100%;           /* image resizes inside card */
+  max-height: 400px;
+  object-fit: contain; 
+  margin-bottom: 1rem;
+}
+
+.skills-card:hover {
+  top: -10px; /* or any color you like */
+}
+
+
+.contact-card {
+  background: #edcc8b ;
+  color: #fff;
+  font-family: 'pionel';
+  display: flex;
+  flex-direction: column;   /* stack vertically */
+  align-items: center;
+  justify-content: center;  /* center vertically */
+  font-family: 'pionel';
+  height: 280px;
+  width: 450px;             /* optional: fix width if needed */
+  cursor: pointer;
+  position: relative; /* Or absolute, depending on layout */
+  top: 0; /* Or bottom, left, right */
+  transition: top 0.3s ease-out;
+}
+
+.contact-card a {
+  color: #ffffff;
+  text-decoration: none;
+  margin-bottom: 2rem;
+  font-family:'Times New Roman', Times, serif;
+  margin-left: 1rem;
+
+}
+
+.contact{
+  color: #615130;
+  font-family: 'pionel';
+  font-weight: lighter;
+  text-align: center;
+  font-size: 4.1rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.contact-card:hover {
+  top: -10px; 
+}
+
+/* Change text and link color on hover */
+/* .contact-card:hover .contact,
+.contact-card:hover a {
+  color: white !important;
+} */
+.dummy-section{
+  min-height: 100vh; 
+  padding: 30px ;
+  font-family: 'pionel';
+  font-size: 3rem;
+  color: #939F5C;
+  font-weight: lighter;
+}
+
+.resume-content{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: black;
+  list-style-type: none;
+}
+
+.dev-section{
+  min-height: 100vh; 
+  padding: 30px ;
+  font-family: 'pionel';
+  font-size: 3rem;
+  color: #939F5C;
+  font-weight: lighter;
+}
+.education-content{
+  font-family: 'pionel';
+  font-size: 3rem;
+  color: #939F5C;
+  font-weight: lighter;
+}
+
+.figma-content{
+  font-family: 'pionel';
+  font-size: 3rem;
+  color: #939F5C;
+  font-weight: lighter;
+}
+
+.restaurant{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+.cookbook{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.5rem;
+  color: black;
+  list-style-type: none;
+  font-weight: bold;
+}
+
+#skills-section {
+  
+  padding: 40px 60px;         /* smaller top padding */
+  min-height: 100vh;          /* keep full screen height */
+  box-sizing: border-box;
+  
+}
+
+
+.resume-content {
+  margin-top:0px;             /* remove extra push down */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  line-height: 1.8;           /* better spacing */
+  color: black;
+  
+}
+
+.skills-content {
+  margin-top: -640px;             /* remove extra push down */
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 1.3rem;
+  line-height: 1.8;           /* better spacing */
+  color: black;
+  left: 60px;
+}
+
+#uiux-section{
+  min-height: 70vh; 
+  padding: 30px ;
+  font-family: 'pionel';
+  font-size: 3rem;
+  color: #939F5C;
+  font-weight: lighter;
+}
+
+#resume-section{
+  min-height: 70vh; 
+}
+
+.skill-photo{
+  position: absolute;
+  left: 920px;
+  text-align: center;
+  z-index: 30;
+}
+
+/* 
+   🔹 Responsive Design
+    */
+
+/* Tablets */
+@media (max-width: 1024px) {
+  .resume-container {
+    grid-template-columns: 1fr 1fr; /* 2 columns instead of 3 */
+  }
+
+  .intro-card {
+    flex-direction: column;
+    text-align: center;
+    max-height: none;
+    padding: 20px;
+  }
+
+  .sam {
+    width: 250px;
+    margin: 20px auto 0 auto;
+    margin-left: 0;
+    margin-top: 0;
+    position: relative;
+    
+  }
+
+  .resume-card,
+  .uiux-card,
+  .development-card,
+  .skills-card,
+  .contact-card {
+    width: 100%;
+    height: auto;
+  }
+
+  .skill-photo {
+    position: relative;
+    left: 0;
+    display: block;
+    margin: 20px auto;
+    max-width: 80%;
+  }
+}
+
+/* Mobiles */
+@media (max-width: 768px) {
+  .resume-container {
+    grid-template-columns: 1fr; /* 1 column stack */
+  }
+  
+  .intro-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+  }
+
+  .name {
+    font-size: 2.5rem;
+    margin: 1rem 0;
+  }
+
+  .bio {
+    max-width: 100%;
+    padding: 0 10px;
+  }
+
+  .sam {
+    width: 250px;
+    margin: 10px auto 0 auto;
+    max-height: 220px;
+    align-self: flex-start;
+    
+  }
+
+  .resume,
+  .uiux,
+  .develop,
+  .skills,
+  .contact {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .resume-card,
+  .uiux-card,
+  .development-card,
+  .skills-card,
+  .contact-card {
+    width: 100%;
+    height: auto;
+    font-size: 1.5rem;
+  }
+
+  .resume-content {
+    font-size: 1rem;
+    padding: 0 10px;
+    margin-top: 20px; 
+  }
+
+  .dev-section,
+  .dummy-section {
+    height: auto;
+    padding: 20px;
+    font-size: 2rem;
+  }
+
+  #skills-section {
+    height: auto;
+  }
+  
+.skills-content{
+  font-size: 1rem;
+}
+  .skill-photo {
+  position: relative; 
+  left: 0;
+  margin: 0 auto;
+  max-width: 300px;
+  height: auto;
+}
+}
+
+
+@media (max-width: 992px) {
+  .resume-container {
+    grid-template-columns: repeat(2, 1fr); /* 2 columns on tablets */
+  }
+
+  .intro-card {
+    grid-column: span 2;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .intro-card .text-section {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 600px) {
+  .resume-container {
+    grid-template-columns: 1fr; /* 1 column on mobile */
+  }
+
+  .intro-card {
+    grid-column: span 1;
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.skill-photo {
+    width: 100%;
+    left: 1000px;
+    margin-top: 10px;
+    max-width: 250px;
+    display: block;
+    position: relative;
+    
+}

@@ -1,0 +1,277 @@
+/* Reset global background */
+html, body, #root {
+  margin: 0;
+  padding: 0;
+  background: #c5d49b !important;
+  font-family: 'Georgia', serif;
+  width: 100%;
+  height: 100%;
+  overflow-x: hidden;
+}
+
+/* Main container */
+.app-container {
+  width: 100%;
+  min-height: 100vh;
+  padding: 2rem;
+  position: relative;
+}
+
+/* Title images */
+.text {
+  max-width: 100%;
+  height: auto;
+}
+
+/* .text2 {
+  position: relative;
+  overflow: hidden;
+  right: 448px;
+  max-width: 100%;
+} */
+
+.stretch-o {
+  font-family: 'pionel', serif;
+  font-weight: 900;
+  font-size: 10vw;        /* responsive with screen */
+  line-height: 1;
+  top: -6.4vw;
+  display: inline-block;  /* ensures transform applies neatly */
+  transform: scaleY(2.8) scaleX(1.5); 
+  transform-origin: baseline center; /* stretch around baseline */
+  margin-left: -26.8vw;    /* tiny overlap, adjusts snug fit */
+  vertical-align: baseline; /* forces same baseline as text */
+  position: relative;
+}
+
+
+/* Stamps */
+.stamp-1 {
+  position: absolute;
+  top: -2px;
+  right: 600px;
+  width: 400px;
+  transform: rotate(-5deg);
+  clip-path: polygon(
+    10% 0%, 90% 0%, 100% 10%, 100% 90%,
+    90% 100%, 10% 100%, 0% 90%, 0% 10%
+  );
+  z-index: 20;
+}
+
+.stamp-2 {
+  position: absolute;
+  top: -45px;
+  right: -90px;
+  width: 600px;
+  transform: rotate(0deg);
+  z-index: 20;
+}
+
+/* Clipped Photo */
+.clipped-photo {
+  position: absolute;
+  bottom: -50px;
+  left: 150px;
+  text-align: center;
+  z-index: 30;
+}
+
+.clipped-photo img {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 2px;
+  filter: grayscale(100%);
+}
+
+/* Folder */
+.folder-wrapper {
+  position: absolute;
+  bottom: 50px;
+  left: 945px;
+  text-align: center;
+  z-index: 40;
+}
+
+.folder-img {
+  width: 600px;
+  max-width: 100%;
+}
+
+.folder-label {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 3.5rem;
+  font-weight: bold;
+  color: #222;
+  font-family: 'Georgia', serif;
+}
+
+.folder-tabs {
+  display: flex;
+  justify-content: space-around;
+  position: absolute;
+  top: 15px;
+  width: 100%;
+  font-size: 1rem;
+  font-weight: bold;
+  color: #111;
+}
+
+/* Button */
+.button {
+  width: 180px;
+  position: absolute;
+  top: 500px;
+  left: 470px;
+}
+
+.know {
+  position: absolute;
+  left: 550px;
+  top: 630px;
+  font-family: 'cursive';
+  animation: bounce 0.4s ease infinite;
+  background-color: transparent;
+  border: none;
+  font-size: x-large;
+  color: #111;
+  cursor: pointer;
+}
+
+@keyframes bounce {
+  100% {
+    transform: translateY(-20px);
+    text-shadow:
+      0 50px 0 black,
+      0 0px 20px rgba(0, 0, 0, 0.8);
+  }
+}
+
+/* Footer */
+footer {
+  background-color: #BBCE8A;
+  margin-top: 45px;
+  height: auto;
+  color: #8f9d6a;
+  padding: 20px 10px;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.2rem;
+}
+
+/* ================== RESPONSIVE BREAKPOINTS ================== */
+
+/* Laptops (≤ 1440px) */
+@media (max-width: 1440px) {
+  .stamp-1 { right: 450px; width: 300px; }
+  .stamp-2 { width: 500px; right: -60px; }
+  .clipped-photo img { width: 320px; }
+  .folder-wrapper { left: 700px; }
+  .folder-img { width: 500px; }
+  .button { left: 400px; top: 450px; }
+  .know { left: 470px; top: 570px; }
+}
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .stamp-1 { right: 300px; width: 220px; }
+  .stamp-2 { width: 400px; right: -40px; }
+  .clipped-photo { left: 80px; }
+  .clipped-photo img { width: 250px; }
+  .folder-wrapper { left: 500px; }
+  .folder-img { width: 400px; }
+  .folder-label { font-size: 2.5rem; }
+  .button { top: 400px; left: 280px; }
+  .know { top: 520px; left: 340px; }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .text{width: 90%;}
+  .text2 { right: 0; width: 90%; }
+  .stamp-1, .stamp-2 { display: none; }
+  .clipped-photo {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 20px auto;
+    text-align: center;
+  }
+  .clipped-photo img { width: 400px; }
+  .folder-wrapper {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 20px auto;
+  }
+  .folder-img { width: 550px; 
+            
+            position: relative;
+            right:35px;
+  }
+  .folder-label { font-size: 3rem; 
+  left: 220px;
+  }
+
+  .button {
+    position: relative;
+    top: 33px;
+    left: -95px;
+    margin: 20px auto;
+    display: block;
+  }
+  .know {
+    position: relative;
+    top: 0;
+    left: 0;
+    margin: 10px auto;
+    display: block;
+    font-size: 1.2rem;
+  }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  .clipped-photo img { width: 160px; }
+  .folder-img { width: 250px; }
+  .folder-label { font-size: 1.6rem; }
+  .know { font-size: 1rem; }
+}
+
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .stretch-o {
+    font-size: 14vw;           /* slightly bigger */
+    transform: scaleY(3.3) scaleX(1.8);
+    margin-left: -45vw;        /* reduce overlap */
+    vertical-align: -0.15em;   /* adjust upward */
+    top: -14vw;
+  }
+}
+
+/* Mobiles (≤ 768px) */
+@media (max-width: 768px) {
+  .stretch-o {
+    font-size: 14vw;           /* bigger on small screens */
+    transform: scaleY(4.7) scaleX(2.5);
+    margin-left: 24.8vw;
+    vertical-align: baseline; /* forces same baseline as text */
+    position: relative;
+    top: -32vw;
+  }
+}
+
+/* Small Mobiles (≤ 480px) */
+@media (max-width: 480px) {
+  .stretch-o {
+    font-size: 16vw;
+    transform: scaleY(1.9) scaleX(1.1);
+    margin-left: 24.8vw;
+    vertical-align: 0;         /* almost baseline */
+    position: relative;
+  }
+}
