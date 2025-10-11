@@ -132,8 +132,8 @@ html, body, #root {
   position: absolute;
   left: 550px;
   top: 630px;
-  font-family: 'cursive';
-  animation: bounce 0.4s ease infinite;
+  font-family: monospace;
+  animation: bounce 1.0s ease-in-out infinite;
   background-color: transparent;
   border: none;
   font-size: x-large;
@@ -141,14 +141,15 @@ html, body, #root {
   cursor: pointer;
 }
 
-@keyframes bounce {
-  100% {
+ @keyframes bounce {
+  100% { 
+    
     transform: translateY(-20px);
     text-shadow:
       0 50px 0 black,
-      0 0px 20px rgba(0, 0, 0, 0.8);
+      /* 0 0px 20px rgba(0, 0, 0, 0.8); */
   }
-}
+} 
 
 /* Footer */
 footer {
@@ -163,9 +164,9 @@ footer {
 }
 
 /* ================== RESPONSIVE BREAKPOINTS ================== */
-
+/* 
 /* Laptops (≤ 1440px) */
-@media (max-width: 1440px) {
+/* @media (max-width: 1440px) {
   .stamp-1 { right: 450px; width: 300px; }
   .stamp-2 { width: 500px; right: -60px; }
   .clipped-photo img { width: 320px; }
@@ -176,7 +177,7 @@ footer {
 }
 
 /* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .stamp-1 { right: 300px; width: 220px; }
   .stamp-2 { width: 400px; right: -40px; }
   .clipped-photo { left: 80px; }
@@ -189,7 +190,7 @@ footer {
 }
 
 /* Mobiles (≤ 768px) */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   .text{width: 90%;}
   .text2 { right: 0; width: 90%; }
   .stamp-1, .stamp-2 { display: none; }
@@ -231,47 +232,211 @@ footer {
     display: block;
     font-size: 1.2rem;
   }
-}
+} */ 
 
 /* Small Mobiles (≤ 480px) */
-@media (max-width: 480px) {
+/* @media (max-width: 480px) {
   .clipped-photo img { width: 160px; }
   .folder-img { width: 250px; }
   .folder-label { font-size: 1.6rem; }
   .know { font-size: 1rem; }
-}
+} */
 
 
 /* Tablets (≤ 1024px) */
-@media (max-width: 1024px) {
+/* @media (max-width: 1024px) {
   .stretch-o {
     font-size: 14vw;           /* slightly bigger */
-    transform: scaleY(3.3) scaleX(1.8);
-    margin-left: -45vw;        /* reduce overlap */
-    vertical-align: -0.15em;   /* adjust upward */
-    top: -14vw;
+    /* transform: scaleY(3.3) scaleX(1.8); */
+    /* margin-left: -45vw;        /* reduce overlap */
+    /* vertical-align: -0.15em;   /* adjust upward */
+    /* top: -14vw; */ 
+  /* } */
+/* }  */
+
+/* Mobiles (≤ 768px) */
+/* @media (max-width: 768px) {
+  .stretch-o {
+    font-size: 14vw;           /* bigger on small screens */
+    /* transform: scaleY(4.7) scaleX(2.5); */
+    /* margin-left: 24.8vw;
+    vertical-align: baseline; forces same baseline as text */
+    /* position: relative;
+    top: -32vw;
+  }
+} */ 
+
+/* Small Mobiles (≤ 480px) */
+/* @media (max-width: 480px) {
+  .stretch-o {
+    font-size: 16vw;
+    transform: scaleY(1.0) scaleX(1.1);
+    margin-left: 24.8vw;
+    vertical-align: 0;         /* almost baseline */
+    /* position: relative;
+  }
+} */ 
+
+/* @media (max-width: 375px) {
+  .stretch-o {
+    font-size: 20vw;
+    transform: scaleY(1.9) scaleX(1.1);
+    margin-left: 24.8vw;
+    vertical-align: 0;         /* almost baseline */
+    /* position: relative;
+  } */
+
+  /* .clipped-photo img { width: 260px; }
+  .folder-img { width: 250px; }
+  .folder-label { font-size: 1.6rem; }
+  .know { font-size: 1rem; }
+}  */ 
+
+/* ✅ RESPONSIVE FIXES */
+
+/* Laptops (≤ 1440px) */
+@media (max-width: 1440px) {
+  .stamp-1 { right: 25vw; width: 25vw; }
+  .stamp-2 { width: 30vw; right: -4vw; }
+  .clipped-photo img { width: 22vw; }
+  .folder-wrapper { left: 50vw; }
+  .folder-img { width: 35vw; }
+  .button { left: 30vw; top: 32vw; }
+  .know { left: 36vw; top: 42vw; }
+}
+
+/* Tablets (≤ 1024px) */
+@media (max-width: 1024px) {
+  .stamp-1, .stamp-2 { display: none; } /* simplify layout */
+  .clipped-photo {
+    position: relative;
+    bottom: 0;
+    left: 0;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  .stretch-o {
+    font-size: 14vw;
+    transform: scaleY(2.8) scaleX(1.5);
+    margin-left: -40vw;
+    top: -10vw;
+  }
+  .clipped-photo img { width: 69vw; }
+  .folder-wrapper {
+    position: relative;
+    left: -10vw;
+    bottom: 0;
+    margin: 30px auto;
+    
+  }
+  .folder-img { width: 90vw; }
+  .folder-label { font-size: 4.9rem; }
+  .button {
+    width: 50vw;
+    position: relative;
+    top: 20px;
+    left: -20vw;
+    display: block;
+    margin: 0 auto;
+  }
+  .know {
+    position: relative;
+    top: 10px;
+    left: 0;
+    display: block;
+    margin: 0 auto;
+    font-size: 360%;
   }
 }
 
 /* Mobiles (≤ 768px) */
 @media (max-width: 768px) {
+  .text { width: 90%; }
   .stretch-o {
-    font-size: 14vw;           /* bigger on small screens */
+    font-size: 14vw;
     transform: scaleY(4.7) scaleX(2.5);
-    margin-left: 24.8vw;
-    vertical-align: baseline; /* forces same baseline as text */
-    position: relative;
+    margin-left: 24vw;
     top: -32vw;
+  }
+
+  .stamp-1, .stamp-2 { display: none; }
+
+  .clipped-photo img { width: 80vw; }
+
+  .folder-wrapper {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    margin: 20px auto;
+  }
+  .folder-img { width: 92vw;
+          margin-left: -12vw;
+  }
+  .folder-label { font-size: 3.5rem; }
+
+  .button {
+    position: relative;
+    left: -25vw;
+    top: 10px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .know {
+    position: relative;
+    left: 0;
+    top: 0;
+    margin: 10px auto;
+    display: block;
+    font-size: 1.7rem;
   }
 }
 
 /* Small Mobiles (≤ 480px) */
 @media (max-width: 480px) {
+  .clipped-photo img { width: 95vw; }
+  .folder-img { width: 105vw; }
+  .folder-label { font-size: 2.5rem; }
   .stretch-o {
-    font-size: 16vw;
-    transform: scaleY(1.9) scaleX(1.1);
-    margin-left: 24.8vw;
-    vertical-align: 0;         /* almost baseline */
-    position: relative;
+    font-size: 18vw;
+    transform: scaleY(3.8) scaleX(1.9);
+    margin-left: 24vw;
+    top: -34vw;
   }
+  
 }
+
+
+@media (max-width: 912px)  {
+  .clipped-photo img { width: 95vw; }
+  .folder-img { width: 105vw; }
+  .folder-label { font-size: 2.3rem; }
+  .stretch-o {
+    font-size: 12vw;
+    transform: scaleY(5.6) scaleX(2.9);
+    margin-left: -64vw;
+    top: -21vw;
+  }
+   .know{
+    font-size: 180%;
+   }
+}
+
+
+@media (max-width: 360px) {
+  .clipped-photo img { width: 95vw; }
+  .folder-img { width: 105vw; }
+  .folder-label { font-size: 2.2rem; }
+  .stretch-o {
+    font-size: 12vw;
+    transform: scaleY(5.7) scaleX(2.9);
+    margin-left: -65vw;
+    top: -21vw;
+  }
+   .know{
+     font-size: 200%
+    }
+}
+
+
