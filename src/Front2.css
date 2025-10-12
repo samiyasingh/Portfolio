@@ -117,6 +117,7 @@ section {
   position: relative; /* Or absolute, depending on layout */
   top: 0; /* Or bottom, left, right */
   transition: top 0.3s ease-out;
+  
 }
 
 .resume-img {
@@ -546,6 +547,8 @@ section {
     grid-column: span 1;
     flex-direction: column;
     text-align: center;
+    margin-left: -2vw;
+    width: 300px;
   }
 }
 
@@ -557,4 +560,20 @@ section {
     display: block;
     position: relative;
     
+}
+
+ 
+
+  .contact-card a{
+    font-size: large;
+  }
+
+.sam{
+    width: 300px;
+    bottom: 22vw;
+    transform: scaleX(1.5) scaleY(2)
+}
+
+.dev-section h1 {
+  font-size: 170%;
 }

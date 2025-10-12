@@ -130,14 +130,14 @@ html, body, #root {
 
 .know {
   position: absolute;
-  left: 550px;
-  top: 630px;
-  font-family: monospace;
+  left: 565px;
+  top: 640px;
+  font-family:"Brush Script MT", cursive;
   animation: bounce 1.0s ease-in-out infinite;
   background-color: transparent;
   border: none;
-  font-size: x-large;
-  color: #111;
+  font-size: 200%;
+  color: #939F5C;
   cursor: pointer;
 }
 
@@ -303,6 +303,9 @@ footer {
   .folder-img { width: 35vw; }
   .button { left: 30vw; top: 32vw; }
   .know { left: 36vw; top: 42vw; }
+  .sam{
+    margin-left: -2px;
+  }
 }
 
 /* Tablets (≤ 1024px) */
