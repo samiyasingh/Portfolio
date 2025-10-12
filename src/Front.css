@@ -303,9 +303,7 @@ footer {
   .folder-img { width: 35vw; }
   .button { left: 30vw; top: 32vw; }
   .know { left: 36vw; top: 42vw; }
-  .sam{
-    margin-left: -2px;
-  }
+  
 }
 
 /* Tablets (≤ 1024px) */
@@ -350,6 +348,7 @@ footer {
     display: block;
     margin: 0 auto;
     font-size: 360%;
+    font-family:"Brush Script MT", cursive;
   }
 }
 
@@ -393,6 +392,7 @@ footer {
     margin: 10px auto;
     display: block;
     font-size: 1.7rem;
+    font-family:"Brush Script MT", cursive;
   }
 }
 
@@ -438,7 +438,8 @@ footer {
     top: -21vw;
   }
    .know{
-     font-size: 200%
+     font-size: 200%;
+     font-family:"Brush Script MT", cursive;
     }
 }
 
