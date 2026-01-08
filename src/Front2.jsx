@@ -144,7 +144,7 @@ const Front2 = () => {
 
         <a className= "link" href="https://github.com/samiyasingh/cupid">🔗Cupids cafe</a>
 
-        <p className="cookbook">📖 Evermore — Digital Cookbook Web </p>
+        <p className="cookbook">📖E-commerce Price Tracker</p>
 
       
         <p className="resume-content">A data-driven e-commerce price tracking web application designed to analyze and visualize historical product prices across multiple platforms. The project focuses on clean data modeling, interactive visualizations, and an intuitive user experience.</p>
