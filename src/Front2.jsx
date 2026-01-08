@@ -142,29 +142,28 @@ const Front2 = () => {
           <li>Ideal for: A cafe, florist, or delivery startup looking for a cozy and elegant front-end template.</li>
         </ul>
 
-        <a className= "link" href="https://github.com/samiyasingh/cupid">Cupids cafe</a>
+        <a className= "link" href="https://github.com/samiyasingh/cupid">🔗Cupids cafe</a>
 
         <p className="cookbook">📖 Evermore — Digital Cookbook Web </p>
 
       
-        <p className="resume-content">A modern and elegant cookbook web application designed to bring recipes to life with a clean UI and smooth user experience. Built with React.js and CSS, Evermore blends functionality with style, making cooking more interactive and enjoyable.</p>
+        <p className="resume-content">A data-driven e-commerce price tracking web application designed to analyze and visualize historical product prices across multiple platforms. The project focuses on clean data modeling, interactive visualizations, and an intuitive user experience.</p>
         <ul className="resume-content">
         Key Features:
 
-        <li>🍲 Interactive recipe cards with categories</li>
-
-        <li>🔍 Search and filter functionality for quick access</li>
-
-        <li>💬 Feedback/review submission form</li>
-
-        <li>🎨 Custom styling with CSS and Google Fonts</li>
- 
-        <li>📱 Fully responsive layout for mobile and desktop</li>
+        <li>📦 Dynamic product selection with dropdown-based filtering</li>
+        <li>📊 Interactive price trend visualization across platforms</li>
+        <li>🗄️ Relational database design with products, platforms, and price history</li>
+        <li>📈 Time-series analysis using Pandas and Matplotlib</li>
+        <li>🌐 Deployed as a web dashboard using Streamlit</li>
 
         Tech Stack:
-        <li>React.js | CSS3</li>
+        <li>Python | SQL (MySQL) | Pandas | Matplotlib | Streamlit | Git/GitHub</li>
 
-       Ideal For: Food bloggers, cooking enthusiasts or anyone looking to showcase recipes in a modern,user-friendly way.</ul>
+        Ideal For:
+        Data analysis projects, price comparison systems, and showcasing SQL + Python integration in real-world applications.
+        </ul>
+        <a className= "link" href="https://priceetracker.streamlit.app/">🔗E-commerce Price Tracker</a>
       </section>
 
       <section id="skills-section" className="dummy-section">
